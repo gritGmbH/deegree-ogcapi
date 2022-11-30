@@ -40,7 +40,6 @@ import org.deegree.ogcapi.config.exceptions.UnsupportedWorkspaceException;
 import org.deegree.ogcapi.config.exceptions.UpdateException;
 import org.deegree.ogcapi.config.exceptions.UploadException;
 import org.deegree.ogcapi.config.exceptions.ValidationException;
-import org.deegree.services.config.ApiKey;
 import org.deegree.services.controller.OGCFrontController;
 import org.slf4j.Logger;
 
