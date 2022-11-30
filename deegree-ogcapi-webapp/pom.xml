@@ -6,7 +6,7 @@
   <description>Webapps for OGC API Implementations</description>
 
   <parent>
-    <groupId>org.deegree</groupId>
+    <groupId>de.grit.deegree</groupId>
     <artifactId>deegree-ogcapi</artifactId>
     <version>1.3-SNAPSHOT</version>
   </parent>
@@ -186,27 +186,27 @@
     </dependency>
     <!-- deegree-core -->
     <dependency>
-      <groupId>org.deegree</groupId>
+      <groupId>de.grit.deegree</groupId>
       <artifactId>deegree-featurestore-sql</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.deegree</groupId>
+      <groupId>de.grit.deegree</groupId>
       <artifactId>deegree-featurestore-simplesql</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.deegree</groupId>
+      <groupId>de.grit.deegree</groupId>
       <artifactId>deegree-featurestore-memory</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.deegree</groupId>
+      <groupId>de.grit.deegree</groupId>
       <artifactId>deegree-featurestore-shape</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.deegree</groupId>
+      <groupId>de.grit.deegree</groupId>
       <artifactId>deegree-connectionprovider-datasource</artifactId>
       <scope>runtime</scope>
     </dependency>

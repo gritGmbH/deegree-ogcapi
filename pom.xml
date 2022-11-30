@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.deegree</groupId>
+  <groupId>de.grit.deegree</groupId>
   <artifactId>deegree-ogcapi</artifactId>
   <version>1.3-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -21,10 +21,18 @@
     </license>
   </licenses>
 
+  <!--
   <scm>
     <connection>scm:git:git@github.com:deegree/deegree-ogcapi.git</connection>
     <developerConnection>scm:git:git@github.com:deegree/deegree-ogcapi.git</developerConnection>
     <url>https://github.com/deegree/deegree-ogcapi</url>
+    <tag>HEAD</tag>
+  </scm>
+  -->
+  <scm>
+    <connection>scm:git:git@git.werne.grit.de:dee/deegree-ogcapi.git</connection>
+    <developerConnection>scm:git:git@git.werne.grit.de:dee/deegree-ogcapi.git</developerConnection>
+    <url>http://git.werne.grit.de:dee/deegree-ogcapi</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -54,6 +62,7 @@
   </repositories>
 
   <distributionManagement>
+    <!--
     <repository>
       <id>deegree-releases</id>
       <url>https://repo.deegree.org/content/repositories/releases/</url>
@@ -61,6 +70,15 @@
     <snapshotRepository>
       <id>deegree-snapshots</id>
       <url>https://repo.deegree.org/content/repositories/deegree-ogcapi-snapshots/</url>
+    </snapshotRepository>
+    -->
+    <repository>
+      <id>maven-apps-release-local</id>
+      <url>https://maven.werne.grit.de/artifactory/apps-release-local/</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-apps-snapshot-local</id>
+      <url>https://maven.werne.grit.de/artifactory/apps-snapshot-local/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -118,7 +136,7 @@
           </executions>
           <dependencies>
             <dependency>
-              <groupId>org.deegree</groupId>
+              <groupId>de.grit.deegree</groupId>
               <artifactId>deegree-jaxb-resolver</artifactId>
               <version>1.0</version>
             </dependency>
@@ -355,6 +373,8 @@
           <releaseProfiles>integration-tests</releaseProfiles>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <arguments>-e</arguments>
+          <!-- local -->
+          <tagNameFormat>v@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
       <plugin>
@@ -503,32 +523,32 @@
     <dependencies>
       <!-- deegree-core -->
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-featurestore-commons</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-featurestore-sql</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-featurestore-simplesql</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-featurestore-memory</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-featurestore-shape</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-services-commons</artifactId>
         <version>${deegree-version}</version>
         <scope>compile</scope>
@@ -544,52 +564,52 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-sqldialect-postgis</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-sqldialect-oracle</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-connectionprovider-datasource</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-core-base</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-core-commons</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-core-geometry</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-core-workspace</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-core-cs</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-services-config</artifactId>
         <version>${deegree-version}</version>
       </dependency>
       <dependency>
-        <groupId>org.deegree</groupId>
+        <groupId>de.grit.deegree</groupId>
         <artifactId>deegree-protocol-wfs</artifactId>
         <version>${deegree-version}</version>
       </dependency>
