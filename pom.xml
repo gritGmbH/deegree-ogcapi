@@ -136,7 +136,7 @@
           </executions>
           <dependencies>
             <dependency>
-              <groupId>de.grit.deegree</groupId>
+              <groupId>org.deegree</groupId>
               <artifactId>deegree-jaxb-resolver</artifactId>
               <version>1.0</version>
             </dependency>
