@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.grit.deegree</groupId>
   <artifactId>deegree-ogcapi</artifactId>
-  <version>1.3.0.2-grit</version>
+  <version>1.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>deegree OGC API</name>
   <description>deegree OGC API implementation</description>
@@ -33,7 +33,7 @@
     <connection>scm:git:git@git.werne.grit.de:dee/deegree-ogcapi.git</connection>
     <developerConnection>scm:git:git@git.werne.grit.de:dee/deegree-ogcapi.git</developerConnection>
     <url>http://git.werne.grit.de:dee/deegree-ogcapi</url>
-    <tag>v1.3.0.2-grit</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <repositories>
